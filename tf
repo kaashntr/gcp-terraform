@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export GOOGLE_APPLICATION_CREDENTIALS=$SECRET_PATH
+
+terraform $@
