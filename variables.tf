@@ -2,9 +2,6 @@ variable "project_id" {
   description = "GCP project ID"
   type = string
 }
-variable "credentials_file" {
-  type = string
-}
 variable "region" {
   description = "GCP region"
   type = string
@@ -79,11 +76,6 @@ variable "master_scopes_list" {
 variable "worker_scopes_list" {
   description = "List of OAuth scopes strings for instance template"
   type = list(string)
-}
-variable "ansible_inventory_dest" {
-  description = "Path where inventory.ini need to be created"
-  type = string
-  default = "/path/to/your/dest"
 }
 variable "ingress_tcp_allow_ports" {
   description = "TCP ports to allow"

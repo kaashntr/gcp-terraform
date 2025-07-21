@@ -227,7 +227,7 @@ module "private_instance" {
 }
 
 resource "local_file" "ansible_inventory" {
-  filename = "${path.module}/../inventory.ini"
+  filename = "${path.module}/../ansible/inventory.ini"
   content = templatefile("${path.module}/inventory.tpl", {
     bastion_ip     = google_compute_address.public_instance_static_ip.address
     k3s_server_ip  = [for instance in module.public_instance.instances_details : instance.network_interface[0].network_ip]
