@@ -67,7 +67,7 @@ module "vpc" {
     },
     {
       name          = "allow-ssh"
-      source_ranges = ["10.0.0.0/8","31.41.69.234/32"]
+      source_ranges = ["10.0.0.0/8","31.41.69.245/32"]
       target_tags   = ["k3s-master", "k3s-worker"]
       allow = [
         {
